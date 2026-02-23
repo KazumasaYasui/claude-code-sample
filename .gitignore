@@ -2,3 +2,4 @@
 .playwright-mcp/
 *.png
 settings.local.json
+.mcp.json
