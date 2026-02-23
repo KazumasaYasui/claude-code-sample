@@ -1,0 +1,8 @@
+{
+  "name": "breakout-game",
+  "version": "1.0.0",
+  "description": "ブロック崩し — vanilla HTML5 Canvas game",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1 --cors"
+  }
+}

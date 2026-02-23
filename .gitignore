@@ -1,0 +1,4 @@
+.playwright/
+.playwright-mcp/
+*.png
+settings.local.json

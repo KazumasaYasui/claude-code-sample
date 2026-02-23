@@ -4,11 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A browser-based breakout game (ブロック崩し) built with vanilla HTML5 Canvas and JavaScript. No build system, bundler, or package manager is used — the game runs directly in a browser by opening `index.html`.
+A browser-based breakout game (ブロック崩し) built with vanilla HTML5 Canvas and JavaScript. No bundler or build step is used — static files are served via `http-server`.
 
 ## Running the Game
 
-Open `index.html` in a browser. There is no build step or server required.
+```bash
+npm start
+```
+
+This runs `npx http-server . -p 8080 -c-1 --cors` and serves the game at http://localhost:8080.
 
 The devcontainer has Playwright/Chromium installed (via `post_create.sh`), so automated browser testing can be done using `npx playwright`.
 
