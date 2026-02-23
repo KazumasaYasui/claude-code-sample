@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブロック崩し</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: #eee;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.1em;
+      color: #e94560;
+    }
+
+    #ui {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    #ui span {
+      color: #a8dadc;
+    }
+
+    canvas {
+      border: 2px solid #e94560;
+      border-radius: 4px;
+      display: block;
+      background: #16213e;
+    }
+
+    #message {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #f0a500;
+      min-height: 1.5em;
+      text-align: center;
+    }
+
+    #restartBtn {
+      margin-top: 0.75rem;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      background: #e94560;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #restartBtn:hover {
+      background: #c73652;
+    }
+
+    #hint {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>ブロック崩し</h1>
+  <div id="ui">
+    <div>スコア: <span id="score">0</span></div>
+    <div>ライフ: <span id="lives">3</span></div>
+    <div>レベル: <span id="level">1</span></div>
+  </div>
+  <canvas id="gameCanvas" width="480" height="540"></canvas>
+  <div id="message">スペースキーまたはクリックでスタート</div>
+  <button id="restartBtn">もう一度</button>
+  <div id="hint">← → キーまたはマウスでパドルを動かす</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
